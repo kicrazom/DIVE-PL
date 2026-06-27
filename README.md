@@ -8,6 +8,8 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg)](LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20977890.svg)](https://doi.org/10.5281/zenodo.20977890)
 
+**Authors:** Łukasz Minarowski, MD, PhD ([ORCID](https://orcid.org/0000-0002-2536-3508)) · Jakub Matuk, BEng ([ORCID](https://orcid.org/0009-0002-8986-8609)) · Maksymilian Lech — Department of Respiratory Physiopathology, Medical University of Białystok, Poland
+
 ---
 
 ## What this is
@@ -53,8 +55,13 @@ DIVE-PL/
   .zenodo.json              # Zenodo deposit metadata
   .gitignore / .gitattributes
   docs/
-    index.html              # GitHub Pages landing / dashboard
+    index.html              # GitHub Pages site (Overview + nav)
+    survey.html             # Case study — the DIVE-PL diving survey (live)
+    methodology.html  pipeline.html  related-work.html
+    reproduce.html  limitations.html  cite.html
+    assets/                 # style.css, favicon.svg
     .nojekyll
+    case-study-survey.md    # survey description (aim, sections, hypotheses)
     related-work.md         # component -> nearest precedent -> our difference
     architecture.mmd        # pipeline diagram (Mermaid)
     open-science-checklist.md
@@ -66,18 +73,12 @@ DIVE-PL/
     README.md               # data governance (RODO/GDPR) — NO PII in repo
 ```
 
-## Case study
+## Case study — the DIVE-PL diving survey
 
-The framework is demonstrated on a cross-sectional online survey of recreational divers in Poland (health, fitness via a non-exercise VO2max proxy, safety knowledge, self-reported adverse events). The study is ethics-approved and registered (see [`docs/CLINICAL_TRIALS.md`](docs/CLINICAL_TRIALS.md)). No participant data are stored in this repository.
+The framework is demonstrated on a cross-sectional online survey of recreational divers in Poland: health status, physical fitness (VO2max via the University of Houston Non-Exercise Test), safety knowledge (DCS, barotrauma, safe-diving rules), risky behaviours, and self-reported adverse events. Aim, design, instrument sections, hypotheses (H1–H3), endpoint and analysis are described in [`docs/case-study-survey.md`](docs/case-study-survey.md) (live: [Case study page](https://kicrazom.github.io/DIVE-PL/survey.html)).
+
+The study is ethics-approved and registered (see [`docs/CLINICAL_TRIALS.md`](docs/CLINICAL_TRIALS.md)). No participant data are stored in this repository.
 
 ## How to cite
 
-See [`CITATION.cff`](CITATION.cff). A Zenodo DOI is minted on the first tagged release.
-
-## Authors
-
-**Łukasz Minarowski, MD, PhD** — Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID [0000-0002-2536-3508](https://orcid.org/0000-0002-2536-3508)
-
-**Jakub Matuk, BEng** — Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID [0009-0002-8986-8609](https://orcid.org/0009-0002-8986-8609)
-
-**Maksymilian Lech** — Department of Respiratory Physiopathology, Medical University of Białystok, Poland
+See [`CITATION.cff`](CITATION.cff) and DOI [10.5281/zenodo.20977890](https://doi.org/10.5281/zenodo.20977890). Authors are listed under the title above.

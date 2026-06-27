@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case study · DIVE-PL</title>
+<meta name="description" content="The DIVE-PL diving survey: aim, design, instrument sections, VO2max estimation, hypotheses, endpoint, and ethics/registration.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">DIVE<span>-PL</span></a>
+    <p class="tagline">A reproducible AI tool-chain methodology for building survey research studies.</p>
+    <nav class="site" aria-label="Primary">
+      <a href="index.html">Overview</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="pipeline.html">Pipeline</a>
+      <a href="survey.html" class="active">Case study</a>
+      <a href="related-work.html">Related work</a>
+      <a href="reproduce.html">Reproduce</a>
+      <a href="limitations.html">Limitations</a>
+      <a href="cite.html">Cite</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+
+  <h1>Case study — the DIVE-PL diving survey</h1>
+  <p class="lead">DIVE-PL is demonstrated on a real, registered study: a cross-sectional online survey of recreational divers in Poland. This page describes the instrument the framework produced.</p>
+
+  <h2>Aim</h2>
+  <p>To assess health status, physical fitness, and safety/training knowledge in relation to the occurrence of diving-related adverse events among recreational divers in Poland.</p>
+  <p><strong>Specific objectives:</strong> estimate cardiorespiratory fitness (VO2max) from a non-exercise questionnaire; assess knowledge of decompression sickness (DCS), barotrauma and safe-diving rules; determine the frequency of DCS/barotrauma symptoms; identify risky behaviours; and test associations between training level, fitness, health and adverse events.</p>
+
+  <h2>Design</h2>
+  <p>Cross-sectional, observational, non-interventional, anonymous online questionnaire (about 12–18 minutes). No clinical procedures or biological sampling; minimal risk.</p>
+
+  <h2>Population</h2>
+  <p>Adults (≥18 years) resident in Poland who completed at least one dive in the past 24 months.</p>
+
+  <h2>Instrument sections</h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Section</th><th>Content</th></tr></thead>
+    <tbody>
+      <tr><td>Demographics</td><td>age, sex, height/weight (BMI), residence</td></tr>
+      <tr><td>Diving exposure &amp; training</td><td>certification level (OWD / AOWD / higher), number of dives, years of experience, organisation</td></tr>
+      <tr><td>Health status</td><td>chronic conditions, medications, contraindications</td></tr>
+      <tr><td>Physical fitness</td><td>physical-activity rating (PA-R) for VO2max estimation</td></tr>
+      <tr><td>Safety knowledge</td><td>DCS, barotrauma and safe-diving rules — tested at three difficulty levels</td></tr>
+      <tr><td>Risky behaviours</td><td>smoking, alcohol before diving, diving beyond certification</td></tr>
+      <tr><td>Adverse events</td><td>self-reported DCS / barotrauma symptoms and diving incidents</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>Fitness estimation</h2>
+  <p>VO2max is estimated with the <strong>University of Houston Non-Exercise Test</strong> from PA-R, age, BMI and sex — a low-cost, scalable proxy used here in a diving population.</p>
+
+  <h2>Hypotheses</h2>
+  <ul>
+    <li><strong>H1.</strong> Higher certification (AOWD and above) is associated with better knowledge of diving-related health hazards.</li>
+    <li><strong>H2.</strong> Lower estimated VO2max is associated with a higher frequency of adverse events in the diving history.</li>
+    <li><strong>H3.</strong> Risky behaviours (smoking, pre-dive alcohol) are more frequent among divers with lower certification.</li>
+  </ul>
+
+  <h2>Endpoint &amp; analysis</h2>
+  <p>Primary endpoint: the proportion of divers reporting at least one diving-related adverse event. Associations with certification level, estimated VO2max, BMI and other factors are analysed using multivariable logistic regression.</p>
+
+  <h2>Ethics &amp; registration</h2>
+  <p>Approved by the Bioethics Committee, Medical University of Białystok (protocol <strong>APK.002.228.2026</strong>). Registered on ClinicalTrials.gov (NCT number pending). GDPR/RODO-compliant and fully anonymous; no participant data are published here.</p>
+
+  <div class="callout warning">
+    <p><strong>Validity caveat.</strong> VO2max is <em>estimated</em>, not measured. Prior fitness–adverse-event evidence used directly measured VO2max; testing the proxy is part of the study. See <a href="limitations.html">Limitations</a>.</p>
+  </div>
+
+</div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p><strong>DIVE-PL</strong> · Medical University of Białystok, Poland · authors are listed on the <a href="index.html">Overview</a>.</p>
+    <p class="lic">Documentation licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code <a href="https://github.com/kicrazom/DIVE-PL/blob/main/LICENSE-CODE">MIT</a>. Built with generative-AI assistance under human oversight — see <a href="cite.html#ai">AI-usage disclosure</a>. DOI <a href="https://doi.org/10.5281/zenodo.20977890">10.5281/zenodo.20977890</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
