@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this methodology, please cite it as below."
+title: "DIVE-PL: A reproducible AI tool-chain methodology for building survey research studies"
+abstract: "An end-to-end, reproducible framework that integrates an LLM design/orchestration agent, an independent LLM reviewer (LLM-as-judge), REDCap electronic data capture, and AI-built analytics dashboards, wrapped in an open-science layer (Zenodo, OSF, GitHub Pages). Demonstrated on a cross-sectional online survey of recreational divers in Poland."
+type: software
+authors:
+  - family-names: Minarowski
+    given-names: Łukasz
+    affiliation: "Medical University of Białystok, Department of Respiratory Physiopathology"
+    orcid: "https://orcid.org/0000-0002-2536-3508"
+repository-code: "https://github.com/kicrazom/DIVE-PL"
+keywords:
+  - survey methodology
+  - large language models
+  - LLM-as-a-judge
+  - REDCap
+  - open science
+  - reproducible research
+  - digital sovereignty
+identifiers:
+  - type: other
+    value: "APK.002.228.2026"
+    description: "Case-study protocol / ethics approval ID (Bioethics Committee, Medical University of Białystok)"
+license: MIT
+license-url: "https://github.com/kicrazom/DIVE-PL/blob/main/LICENSING.md"
+version: 0.1.0
+date-released: "2026-06-27"

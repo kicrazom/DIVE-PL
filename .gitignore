@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Node / React
+node_modules/
+dist/
+build/
+.npm/
+
+# Secrets & config (never commit credentials)
+.env
+.env.*
+*.key
+*.pem
+secrets.*
+
+# Data — RODO/GDPR: no raw or identifiable participant data in the repo
+data/raw/
+data/processed/
+*.csv
+*.xlsx
+*.sav
+*.dta
+!data/**/README.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

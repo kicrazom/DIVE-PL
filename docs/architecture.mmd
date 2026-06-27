@@ -1,0 +1,36 @@
+flowchart TD
+    subgraph S1["1 - Design & Orchestration"]
+        A["LLM Agent<br/>Claude / Cowork"]
+    end
+    subgraph S2["2 - Instrument Review"]
+        B["LLM Reviewer<br/>GPT (LLM-as-judge)"]
+    end
+    subgraph S3["3 - Data Capture"]
+        C[("REDCap<br/>EDC platform")]
+    end
+    subgraph S4["4 - Analytics"]
+        D["AI-built Dashboards<br/>Python / React"]
+    end
+
+    A -->|draft items, protocol| B
+    B -->|flags: bias, clarity, validity| A
+    A -->|validated instrument| C
+    C -->|de-identified export| D
+
+    H[["Human-in-the-loop<br/>expert oversight"]]
+    H -.governs.- A
+    H -.governs.- B
+    H -.governs.- C
+    H -.governs.- D
+
+    subgraph OS["Open-science layer (reproducibility)"]
+        G["GitHub repo"]
+        Z["Zenodo DOI"]
+        O["OSF preregistration"]
+        P["GitHub Pages live dashboard"]
+    end
+
+    A -.archived.-> G
+    A -.preregistered.-> O
+    D -.published.-> P
+    G --> Z

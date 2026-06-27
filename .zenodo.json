@@ -1,0 +1,30 @@
+{
+  "title": "DIVE-PL: A reproducible AI tool-chain methodology for building survey research studies",
+  "description": "An end-to-end, reproducible framework integrating an LLM design/orchestration agent, an independent LLM reviewer (LLM-as-judge), REDCap electronic data capture, and AI-built analytics dashboards, wrapped in an open-science layer. Case study: recreational divers in Poland.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "creators": [
+    {
+      "name": "Minarowski, Łukasz",
+      "affiliation": "Medical University of Białystok, Department of Respiratory Physiopathology",
+      "orcid": "0000-0002-2536-3508"
+    }
+  ],
+  "keywords": [
+    "survey methodology",
+    "large language models",
+    "LLM-as-a-judge",
+    "REDCap",
+    "open science",
+    "reproducible research",
+    "digital sovereignty"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/kicrazom/DIVE-PL",
+      "scheme": "url"
+    }
+  ]
+}

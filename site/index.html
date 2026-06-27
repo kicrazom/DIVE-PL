@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DIVE-PL — AI survey-research methodology</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+           max-width: 860px; margin: 3rem auto; padding: 0 1.25rem; line-height: 1.6; }
+    h1 { margin-bottom: .25rem; }
+    .tag { color: #666; font-size: .98rem; }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); margin: 1.5rem 0; }
+    .card { border: 1px solid #8884; border-radius: 12px; padding: 1rem; }
+    .card h3 { margin: 0 0 .35rem; font-size: 1rem; }
+    .pill { display:inline-block; border:1px solid #8886; border-radius:999px; padding:.1rem .6rem; font-size:.8rem; margin-right:.3rem; }
+    footer { margin-top: 2rem; color: #777; font-size: .85rem; }
+    a { color: #2b6cb0; }
+  </style>
+</head>
+<body>
+  <h1>DIVE-PL</h1>
+  <p class="tag">A reproducible AI tool-chain methodology for building survey research studies.</p>
+  <p><span class="pill">MIT + CC BY 4.0</span><span class="pill">Open science</span><span class="pill">RODO/GDPR</span></p>
+
+  <p>This page hosts the public, live analytics dashboard for the case study
+     (aggregated, de-identified data only). The interactive build embeds here.</p>
+
+  <div class="grid">
+    <div class="card"><h3>1 · LLM agent</h3>Designs &amp; orchestrates the study.</div>
+    <div class="card"><h3>2 · LLM reviewer</h3>Validates items (LLM-as-judge).</div>
+    <div class="card"><h3>3 · REDCap</h3>Electronic data capture.</div>
+    <div class="card"><h3>4 · Dashboards</h3>Python / React analytics.</div>
+  </div>
+
+  <p>Methodology &amp; code: <a href="https://github.com/kicrazom/DIVE-PL">github.com/kicrazom/DIVE-PL</a></p>
+
+  <footer>
+    Dashboard placeholder · publishes only aggregated data (RODO/GDPR) · v0.1.0 ·
+    © 2026 Łukasz Minarowski, ORCID 0000-0002-2536-3508
+  </footer>
+</body>
+</html>
