@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology · DIVE-PL</title>
+<meta name="description" content="The DIVE-PL framework, stage by stage: LLM design agent, LLM-as-judge reviewer, REDCap capture, AI dashboards, and quality control.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">DIVE<span>-PL</span></a>
+    <p class="tagline">A reproducible AI tool-chain methodology for building survey research studies.</p>
+    <nav class="site" aria-label="Primary">
+      <a href="index.html">Overview</a>
+      <a href="methodology.html" class="active">Methodology</a>
+      <a href="pipeline.html">Pipeline</a>
+      <a href="related-work.html">Related work</a>
+      <a href="reproduce.html">Reproduce</a>
+      <a href="limitations.html">Limitations</a>
+      <a href="cite.html">Cite</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+
+  <h1>Methodology</h1>
+  <p class="lead">Tool-agnostic where possible; the reference implementation uses Claude/Cowork, GPT, REDCap, and Python/React.</p>
+
+  <h2>Design principles</h2>
+  <ul>
+    <li><strong>Human-in-the-loop.</strong> Every AI output is reviewed and approved by an expert before it affects the study.</li>
+    <li><strong>Separation of roles.</strong> The authoring model and the reviewing model are kept distinct to reduce self-confirmation bias.</li>
+    <li><strong>Reproducibility by construction.</strong> Prompts, instrument definitions, code and analysis are version-controlled and archived with a DOI.</li>
+    <li><strong>Privacy &amp; sovereignty (RODO/GDPR).</strong> No PII enters the repository; anonymisation and local-first processing are defaults.</li>
+    <li><strong>Transparency.</strong> AI involvement is disclosed per artifact, in line with open-science norms and EU AI Act transparency expectations.</li>
+  </ul>
+
+  <h2>Stage 1 — Design &amp; orchestration (LLM agent)</h2>
+  <p>The agent assists with research-question decomposition, draft items, protocol, registration artifacts (ClinicalTrials.gov / OSF), consent and RODO text, and workflow orchestration. Outputs are drafts for expert approval; the agent never finalises an instrument autonomously.</p>
+
+  <h2>Stage 2 — Instrument review (LLM-as-judge)</h2>
+  <p>A second, independent LLM evaluates each item against explicit criteria: clarity, ambiguity, double-barrelled phrasing, leading wording, cultural bias, response-option balance, and content-validity relevance. It returns structured flags and suggested fixes that loop back to Stage 1; human experts adjudicate. Where formal content validity is required, LLM relevance ratings may be reported alongside — never instead of — a human expert panel (I-CVI / CVI).</p>
+
+  <h2>Stage 3 — Data capture (REDCap)</h2>
+  <p>The approved instrument is implemented in REDCap: data dictionary, branching logic, consent, RODO collapsible, validation rules. REDCap provides access control, an audit trail, and API access. De-identified exports feed Stage 4.</p>
+
+  <h2>Stage 4 — Analytics dashboards (Python / React)</h2>
+  <p>AI assists in generating reproducible analysis code and interactive dashboards for descriptive statistics, hypothesis tests, and figures, published via GitHub Pages and showing aggregated, de-identified data only.</p>
+
+  <h2>Quality control — the "Judge" pass</h2>
+  <p>Each stage carries a self-audit: source quality, double-counting / leakage, outdated assumptions, and unjustified extrapolation. AI-derived artifacts are explicitly labelled and separated from expert-verified ones.</p>
+  
+</div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Łukasz Minarowski, MD, PhD</strong> · Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID <a href="https://orcid.org/0000-0002-2536-3508">0000-0002-2536-3508</a></p>
+    <p class="lic">Documentation licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code <a href="https://github.com/kicrazom/DIVE-PL/blob/main/LICENSE-CODE">MIT</a>. Built with generative-AI assistance under human oversight — see <a href="cite.html#ai">AI-usage disclosure</a>. DOI <a href="https://doi.org/10.5281/zenodo.20977890">10.5281/zenodo.20977890</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

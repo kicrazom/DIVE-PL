@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Related work · DIVE-PL</title>
+<meta name="description" content="Component-by-component prior art for DIVE-PL: each brick is published; the integration is the contribution.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">DIVE<span>-PL</span></a>
+    <p class="tagline">A reproducible AI tool-chain methodology for building survey research studies.</p>
+    <nav class="site" aria-label="Primary">
+      <a href="index.html">Overview</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="pipeline.html">Pipeline</a>
+      <a href="related-work.html" class="active">Related work</a>
+      <a href="reproduce.html">Reproduce</a>
+      <a href="limitations.html">Limitations</a>
+      <a href="cite.html">Cite</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+
+  <h1>Related work</h1>
+  <p class="lead">Each component has prior art. The novelty is the integration of all four plus a full open-science reproducibility layer, demonstrated on a real prospective human survey study. Literature scan: mid-2026 (preprints flagged).</p>
+
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Component</th><th>Nearest precedent</th><th>Established</th><th>Our difference</th></tr></thead>
+    <tbody>
+      <tr><td>LLM authors instrument</td><td>Current Psychology 2025; EJPA 2024; PLOS ONE 2026; J. Patient-Rep. Outcomes 2025</td><td>LLM-generated scales reproduce factor structure &amp; reliability of gold-standard instruments</td><td>Authoring embedded in an EDC + reviewer + dashboard + open-science chain</td></tr>
+      <tr><td>Second LLM as reviewer</td><td>arXiv:2501.05985 (2025); ChatGPTest arXiv:2405.06329</td><td>Generator+reviewer loop and LLM critique of item wording exist</td><td>Reviewer used as a formal, logged QC gate feeding registration-grade instruments</td></tr>
+      <tr><td>REDCap + LLM</td><td>Kaiyrbekov et al., JAMIA Open 2025; Vanderbilt/Stanford modules (grey lit)</td><td>LLM+REDCap capture works; AI-built REDCap instruments mostly grey lit</td><td>AI-assisted construction of registration-ready REDCap instruments, documented</td></tr>
+      <tr><td>AI-built dashboards</td><td>Informatics (MDPI) 2026; REDCap+dashboard+chatbot PMC12099335 (2025)</td><td>Generative-AI ETL/visualisation as methodology exists</td><td>Dashboard published openly as part of the reproducibility layer</td></tr>
+      <tr><td>Conceptual AI survey framework</td><td>Frontiers in Digital Health 2025</td><td>A conceptual framework exists</td><td>We provide an implemented, end-to-end, reproducible pipeline + case study</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout">
+    <p><strong>One-line verdict.</strong> Every brick is published; the building is not. DIVE-PL is a methods/framework paper with an implementation case study, citing precedents honestly.</p>
+  </div>
+
+  <h2>Key references</h2>
+  <ol class="refs">
+    <li>Exploring LLMs for Automated Generation and Adaptation of Questionnaires — <a href="https://arxiv.org/abs/2501.05985">arXiv:2501.05985</a></li>
+    <li>ChatGPTest: questionnaire pretesting with GPT — <a href="https://arxiv.org/abs/2405.06329">arXiv:2405.06329</a></li>
+    <li>Automated survey collection with LLM agents — <a href="https://academic.oup.com/jamiaopen/article/8/5/ooaf103/8306995">JAMIA Open 2025</a></li>
+    <li>Generative-AI-assisted clinical data processing &amp; dashboards — <a href="https://www.mdpi.com/2227-9709/13/4/48">Informatics (MDPI) 2026</a></li>
+    <li>Rethinking survey development in health research with AI — <a href="https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2025.1636333/full">Frontiers in Digital Health 2025</a></li>
+    <li>REDCap + dashboards + AI chatbot architecture — <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12099335/">PMC12099335 (2025)</a></li>
+    <li>Automated psychology questionnaire generation with LLMs — <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0345117">PLOS ONE 2026</a></li>
+  </ol>
+  
+</div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Łukasz Minarowski, MD, PhD</strong> · Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID <a href="https://orcid.org/0000-0002-2536-3508">0000-0002-2536-3508</a></p>
+    <p class="lic">Documentation licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code <a href="https://github.com/kicrazom/DIVE-PL/blob/main/LICENSE-CODE">MIT</a>. Built with generative-AI assistance under human oversight — see <a href="cite.html#ai">AI-usage disclosure</a>. DOI <a href="https://doi.org/10.5281/zenodo.20977890">10.5281/zenodo.20977890</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

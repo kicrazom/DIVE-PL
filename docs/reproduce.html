@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reproduce · DIVE-PL</title>
+<meta name="description" content="How to reproduce DIVE-PL: clone the repo, follow the open-science checklist, and cite the Zenodo DOI.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">DIVE<span>-PL</span></a>
+    <p class="tagline">A reproducible AI tool-chain methodology for building survey research studies.</p>
+    <nav class="site" aria-label="Primary">
+      <a href="index.html">Overview</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="pipeline.html">Pipeline</a>
+      <a href="related-work.html">Related work</a>
+      <a href="reproduce.html" class="active">Reproduce</a>
+      <a href="limitations.html">Limitations</a>
+      <a href="cite.html">Cite</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+
+  <h1>Reproduce</h1>
+  <p class="lead">The framework is designed to be reproduced end-to-end from public artifacts.</p>
+
+  <h2>Get the repository</h2>
+  <pre><code>git clone https://github.com/kicrazom/DIVE-PL.git
+cd DIVE-PL</code></pre>
+
+  <h2>What is public</h2>
+  <ul>
+    <li><a href="https://github.com/kicrazom/DIVE-PL/blob/main/METHODOLOGY.md">Methodology</a> — the four stages and quality-control pass.</li>
+    <li><a href="https://github.com/kicrazom/DIVE-PL/blob/main/docs/related-work.md">Related work</a> — component → precedent → difference.</li>
+    <li><a href="https://github.com/kicrazom/DIVE-PL/blob/main/docs/architecture.mmd">Architecture diagram</a> (Mermaid).</li>
+    <li><a href="https://github.com/kicrazom/DIVE-PL/blob/main/docs/open-science-checklist.md">Open-science checklist</a> — Zenodo / OSF / Pages steps.</li>
+    <li><code>src/</code> — reference implementation (agent / reviewer / redcap / dashboard), added incrementally.</li>
+  </ul>
+
+  <h2>Privacy gate (RODO/GDPR)</h2>
+  <div class="callout warning">
+    <p>No raw or identifiable participant data is stored in the repository. The dashboard publishes aggregated, de-identified data only. Anonymisation is applied before any analysis export.</p>
+  </div>
+
+  <h2>Archived snapshot</h2>
+  <p>Each release is archived on Zenodo with a DOI: <a href="https://doi.org/10.5281/zenodo.20977890">10.5281/zenodo.20977890</a>. Cite the DOI to reproduce against an exact snapshot.</p>
+  
+</div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Łukasz Minarowski, MD, PhD</strong> · Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID <a href="https://orcid.org/0000-0002-2536-3508">0000-0002-2536-3508</a></p>
+    <p class="lic">Documentation licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code <a href="https://github.com/kicrazom/DIVE-PL/blob/main/LICENSE-CODE">MIT</a>. Built with generative-AI assistance under human oversight — see <a href="cite.html#ai">AI-usage disclosure</a>. DOI <a href="https://doi.org/10.5281/zenodo.20977890">10.5281/zenodo.20977890</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

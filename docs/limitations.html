@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Limitations · DIVE-PL</title>
+<meta name="description" content="Honest limitations of DIVE-PL: preprint-stage evidence, human-in-the-loop dependency, LLM bias, and estimated vs measured VO2max in the case study.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">DIVE<span>-PL</span></a>
+    <p class="tagline">A reproducible AI tool-chain methodology for building survey research studies.</p>
+    <nav class="site" aria-label="Primary">
+      <a href="index.html">Overview</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="pipeline.html">Pipeline</a>
+      <a href="related-work.html">Related work</a>
+      <a href="reproduce.html">Reproduce</a>
+      <a href="limitations.html" class="active">Limitations</a>
+      <a href="cite.html">Cite</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+
+  <h1>Limitations</h1>
+  <p class="lead">Stated up front, to be addressed in any paper built on this framework.</p>
+
+  <h2>Evidence maturity</h2>
+  <div class="callout embargo">
+    <p>Much of the supporting evidence for the LLM-as-reviewer and AI-built-dashboard components is <strong>preprint-stage</strong>. This is flagged in <a href="related-work.html">Related work</a> and should be stated explicitly when citing.</p>
+  </div>
+
+  <h2>AI is a complement, not a replacement</h2>
+  <p>The literature is unanimous that AI here augments expert work under human oversight. DIVE-PL inherits the risks of LLM bias, hallucination, and near-verbatim reproduction of existing items; the independent-reviewer stage and human adjudication mitigate but do not eliminate them.</p>
+
+  <h2>Case-study validity caveat</h2>
+  <p>In the diving case study, VO2max is <strong>estimated</strong> via a non-exercise test, not measured. Prior fitness–adverse-event evidence used directly measured VO2max; whether the cheaper proxy reproduces that relationship is itself part of what the case study tests, and a limitation to disclose.</p>
+
+  <h2>Scope</h2>
+  <p>DIVE-PL is a methodology for <em>building</em> survey studies reproducibly. It does not validate any specific clinical claim; that belongs to the individual studies built with it.</p>
+  
+</div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Łukasz Minarowski, MD, PhD</strong> · Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID <a href="https://orcid.org/0000-0002-2536-3508">0000-0002-2536-3508</a></p>
+    <p class="lic">Documentation licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code <a href="https://github.com/kicrazom/DIVE-PL/blob/main/LICENSE-CODE">MIT</a>. Built with generative-AI assistance under human oversight — see <a href="cite.html#ai">AI-usage disclosure</a>. DOI <a href="https://doi.org/10.5281/zenodo.20977890">10.5281/zenodo.20977890</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

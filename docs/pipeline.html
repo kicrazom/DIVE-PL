@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pipeline · DIVE-PL</title>
+<meta name="description" content="The DIVE-PL pipeline as a flow: LLM agent to LLM reviewer to REDCap to dashboards, governed by human oversight and an open-science layer.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">DIVE<span>-PL</span></a>
+    <p class="tagline">A reproducible AI tool-chain methodology for building survey research studies.</p>
+    <nav class="site" aria-label="Primary">
+      <a href="index.html">Overview</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="pipeline.html" class="active">Pipeline</a>
+      <a href="related-work.html">Related work</a>
+      <a href="reproduce.html">Reproduce</a>
+      <a href="limitations.html">Limitations</a>
+      <a href="cite.html">Cite</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+
+  <h1>Pipeline</h1>
+  <p class="lead">Four AI components in a reviewed loop, governed end-to-end by human oversight and an open-science layer.</p>
+
+  <div class="flow">
+    <div class="flow-step">1 · LLM agent (Claude / Cowork) — design &amp; orchestration</div>
+    <div class="flow-step">2 · LLM reviewer (GPT, LLM-as-judge) — validates items, loops fixes back</div>
+    <div class="flow-step">3 · REDCap — validated instrument, consent / RODO, de-identified capture</div>
+    <div class="flow-step">4 · AI-built dashboards (Python / React) — aggregated analytics</div>
+    <div class="flow-step scoped">Open-science layer: GitHub · Zenodo DOI · OSF preregistration · GitHub Pages</div>
+  </div>
+
+  <div class="callout">
+    <p><strong>Reviewed loop.</strong> Stage 1 drafts items; Stage 2 returns structured flags (bias, clarity, validity); the agent revises; a human expert approves before anything reaches REDCap.</p>
+  </div>
+
+  <div class="callout warning">
+    <p><strong>Governance.</strong> A domain expert governs all four stages. AI augments and is verified; it does not replace expert judgment.</p>
+  </div>
+
+  <p>The canonical source diagram (Mermaid) lives at <a href="https://github.com/kicrazom/DIVE-PL/blob/main/docs/architecture.mmd"><code>docs/architecture.mmd</code></a>.</p>
+  
+</div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Łukasz Minarowski, MD, PhD</strong> · Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID <a href="https://orcid.org/0000-0002-2536-3508">0000-0002-2536-3508</a></p>
+    <p class="lic">Documentation licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code <a href="https://github.com/kicrazom/DIVE-PL/blob/main/LICENSE-CODE">MIT</a>. Built with generative-AI assistance under human oversight — see <a href="cite.html#ai">AI-usage disclosure</a>. DOI <a href="https://doi.org/10.5281/zenodo.20977890">10.5281/zenodo.20977890</a>.</p>
+  </div>
+</footer>
+</body>
+</html>

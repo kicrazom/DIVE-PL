@@ -6,7 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE-CODE)
 [![License: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg)](LICENSE)
-[![DOI](https://img.shields.io/badge/Zenodo-pending-blue.svg)](docs/open-science-checklist.md)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20977890.svg)](https://doi.org/10.5281/zenodo.20977890)
 
 ---
 

@@ -1,43 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DIVE-PL — AI survey-research methodology</title>
-  <style>
-    :root { color-scheme: light dark; }
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-           max-width: 860px; margin: 3rem auto; padding: 0 1.25rem; line-height: 1.6; }
-    h1 { margin-bottom: .25rem; }
-    .tag { color: #666; font-size: .98rem; }
-    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); margin: 1.5rem 0; }
-    .card { border: 1px solid #8884; border-radius: 12px; padding: 1rem; }
-    .card h3 { margin: 0 0 .35rem; font-size: 1rem; }
-    .pill { display:inline-block; border:1px solid #8886; border-radius:999px; padding:.1rem .6rem; font-size:.8rem; margin-right:.3rem; }
-    footer { margin-top: 2rem; color: #777; font-size: .85rem; }
-    a { color: #2b6cb0; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview · DIVE-PL</title>
+<meta name="description" content="DIVE-PL: a reproducible AI tool-chain methodology integrating an LLM design agent, an LLM-as-judge reviewer, REDCap, and AI-built dashboards, with an open-science layer.">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
-  <h1>DIVE-PL</h1>
-  <p class="tag">A reproducible AI tool-chain methodology for building survey research studies.</p>
-  <p><span class="pill">MIT + CC BY 4.0</span><span class="pill">Open science</span><span class="pill">RODO/GDPR</span></p>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">DIVE<span>-PL</span></a>
+    <p class="tagline">A reproducible AI tool-chain methodology for building survey research studies.</p>
+    <nav class="site" aria-label="Primary">
+      <a href="index.html" class="active">Overview</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="pipeline.html">Pipeline</a>
+      <a href="related-work.html">Related work</a>
+      <a href="reproduce.html">Reproduce</a>
+      <a href="limitations.html">Limitations</a>
+      <a href="cite.html">Cite</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
 
-  <p>This page hosts the public, live analytics dashboard for the case study
-     (aggregated, de-identified data only). The interactive build embeds here.</p>
+  <h1>An AI tool-chain for building survey studies — made reproducible</h1>
+  <p class="lead">DIVE-PL specifies and demonstrates an end-to-end pipeline for designing, fielding and analysing questionnaire research using an integrated chain of AI tools, wrapped in an open-science layer that makes every step independently verifiable.</p>
 
-  <div class="grid">
-    <div class="card"><h3>1 · LLM agent</h3>Designs &amp; orchestrates the study.</div>
-    <div class="card"><h3>2 · LLM reviewer</h3>Validates items (LLM-as-judge).</div>
-    <div class="card"><h3>3 · REDCap</h3>Electronic data capture.</div>
-    <div class="card"><h3>4 · Dashboards</h3>Python / React analytics.</div>
+  <div class="badges">
+    <a class="badge" href="https://doi.org/10.5281/zenodo.20977890">Zenodo DOI</a>
+    <a class="badge" href="https://github.com/kicrazom/DIVE-PL">GitHub repository</a>
+    <a class="badge" href="https://creativecommons.org/licenses/by/4.0/">Docs: CC BY 4.0</a>
+    <a class="badge" href="https://github.com/kicrazom/DIVE-PL/blob/main/LICENSE-CODE">Code: MIT</a>
   </div>
 
-  <p>Methodology &amp; code: <a href="https://github.com/kicrazom/DIVE-PL">github.com/kicrazom/DIVE-PL</a></p>
+  <div class="callout warning">
+    <p><strong>Human-in-the-loop boundary.</strong> Every AI output is reviewed and approved by a domain expert before it affects the study. AI augments; it does not replace expert judgment, and AI tools are not co-authors. See <a href="limitations.html">Limitations</a>.</p>
+  </div>
 
-  <footer>
-    Dashboard placeholder · publishes only aggregated data (RODO/GDPR) · v0.1.0 ·
-    © 2026 Łukasz Minarowski, ORCID 0000-0002-2536-3508
-  </footer>
+  <h2>The contribution</h2>
+  <p>The novelty is the <strong>integration</strong>, not any single technique. Each component has prior art; to our knowledge the combination of all four components plus a full open-science reproducibility layer has not been published as a single survey-study methodology (literature scan, mid-2026). See <a href="related-work.html">Related work</a>.</p>
+
+  <h2>The four components</h2>
+  <div class="cards">
+    <div class="card"><h3>1 · LLM agent</h3><p>Claude / Cowork designs &amp; orchestrates the study: protocol, item drafting, registration artifacts, workflow.</p></div>
+    <div class="card"><h3>2 · LLM reviewer</h3><p>GPT acts as an independent <em>LLM-as-judge</em>, flagging bias, ambiguity, and content-validity issues.</p></div>
+    <div class="card"><h3>3 · REDCap</h3><p>Electronic data capture: validated instrument, consent / RODO logic, de-identified data store.</p></div>
+    <div class="card"><h3>4 · Dashboards</h3><p>AI-built Python / React analytics, published openly via GitHub Pages.</p></div>
+  </div>
+
+  <h2>Open-science layer</h2>
+  <div class="table-scroll">
+  <table>
+    <thead><tr><th>Channel</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td>GitHub</td><td>methodology, code, instrument definitions, prompts</td></tr>
+      <tr><td>Zenodo</td><td>archival DOI per release (citable artifact)</td></tr>
+      <tr><td>OSF</td><td>project page + preregistration of the case study</td></tr>
+      <tr><td>GitHub Pages</td><td>this live site + analytics dashboard</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="muted">The open-science stack is standard FAIR practice — not claimed as novel; it is what makes the integrated framework reproducible.</p>
+
+  <h2>Case study</h2>
+  <p>The framework is demonstrated on a cross-sectional online survey of recreational divers in Poland (health, fitness via a non-exercise VO2max proxy, safety knowledge, and self-reported adverse events). The study is ethics-approved and registered (protocol APK.002.228.2026). No participant data are published here.</p>
+  
+</div>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p><strong>Łukasz Minarowski, MD, PhD</strong> · Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID <a href="https://orcid.org/0000-0002-2536-3508">0000-0002-2536-3508</a></p>
+    <p class="lic">Documentation licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; code <a href="https://github.com/kicrazom/DIVE-PL/blob/main/LICENSE-CODE">MIT</a>. Built with generative-AI assistance under human oversight — see <a href="cite.html#ai">AI-usage disclosure</a>. DOI <a href="https://doi.org/10.5281/zenodo.20977890">10.5281/zenodo.20977890</a>.</p>
+  </div>
+</footer>
 </body>
 </html>
