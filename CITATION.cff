@@ -8,6 +8,13 @@ authors:
     given-names: Łukasz
     affiliation: "Medical University of Białystok, Department of Respiratory Physiopathology"
     orcid: "https://orcid.org/0000-0002-2536-3508"
+  - family-names: Matuk
+    given-names: Jakub
+    affiliation: "Medical University of Białystok, Department of Respiratory Physiopathology"
+    orcid: "https://orcid.org/0009-0002-8986-8609"
+  - family-names: Lech
+    given-names: Maksymilian
+    affiliation: "Medical University of Białystok, Department of Respiratory Physiopathology"
 repository-code: "https://github.com/kicrazom/DIVE-PL"
 doi: "10.5281/zenodo.20977890"
 keywords:

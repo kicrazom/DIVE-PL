@@ -34,7 +34,7 @@ See [`docs/architecture.mmd`](docs/architecture.mmd) and [`METHODOLOGY.md`](METH
 | **GitHub** (this repo) | methodology, code, instrument definitions, prompts |
 | **Zenodo** | archival DOI per release (citable artifact) |
 | **OSF** | project page + preregistration of the case study |
-| **GitHub Pages** | live, public analytics dashboard (`site/`) |
+| **GitHub Pages** | live public site + analytics dashboard (`docs/`) |
 
 The open-science stack is standard FAIR practice — **not** claimed as novel; it is what makes the integrated framework reproducible.
 
@@ -77,5 +77,7 @@ See [`CITATION.cff`](CITATION.cff). A Zenodo DOI is minted on the first tagged r
 ## Authors
 
 **Łukasz Minarowski, MD, PhD** — Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID [0000-0002-2536-3508](https://orcid.org/0000-0002-2536-3508)
-**Jakub Matuk**
-**Maksymilian Lech**
+
+**Jakub Matuk, BEng** — Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID [0009-0002-8986-8609](https://orcid.org/0009-0002-8986-8609)
+
+**Maksymilian Lech** — Department of Respiratory Physiopathology, Medical University of Białystok, Poland
