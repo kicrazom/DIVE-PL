@@ -77,5 +77,7 @@ See [`CITATION.cff`](CITATION.cff). A Zenodo DOI is minted on the first tagged r
 ## Authors
 
 **Łukasz Minarowski, MD, PhD** — Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID [0000-0002-2536-3508](https://orcid.org/0000-0002-2536-3508)
+
 **Jakub Matuk**
+
 **Maksymilian Lech**
