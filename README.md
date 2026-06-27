@@ -78,6 +78,6 @@ See [`CITATION.cff`](CITATION.cff). A Zenodo DOI is minted on the first tagged r
 
 **Łukasz Minarowski, MD, PhD** — Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID [0000-0002-2536-3508](https://orcid.org/0000-0002-2536-3508)
 
-**Jakub Matuk**
+**Jakub Matuk, BEng** — Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID [0009-0002-8986-8609](https://orcid.org/0009-0002-8986-8609)
 
 **Maksymilian Lech**
