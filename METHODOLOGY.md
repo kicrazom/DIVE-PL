@@ -5,22 +5,22 @@ This document specifies the framework. It is tool-agnostic where possible; the r
 ## 1. Design principles
 
 - **Human-in-the-loop.** Every AI output is reviewed and approved by a domain expert before it affects the study. AI augments; it does not replace.
-- **Separation of roles.** The *authoring* model and the *reviewing* model are kept distinct to reduce self-confirmation bias (author vs. independent reviewer).
+- **Separation of roles.** Drafting and review are kept distinct — investigators (with Cowork assistance) author; an independent model (GPT-5.5) reviews — reducing self-confirmation bias.
 - **Reproducibility by construction.** Prompts, instrument definitions, code and analysis are version-controlled and archived with a DOI.
 - **Privacy & sovereignty (RODO/GDPR).** No personally identifiable information (PII) enters the repository; anonymisation and local-first processing are defaults.
 - **Transparency.** AI involvement is disclosed per artifact (see `AI_USAGE_DISCLOSURE.md`), in line with open-science norms and the EU AI Act's transparency expectations.
 
-## 2. Stage 1 — Design & orchestration (LLM agent)
+## 2. Stage 1 — Design & orchestration (investigators)
 
-The LLM agent assists with: research-question decomposition, draft questionnaire items, study protocol, registration artifacts (ClinicalTrials.gov / OSF), consent and RODO text, and workflow orchestration across the tool-chain. Outputs are drafts for expert approval. The agent never finalises an instrument autonomously.
+The investigators (authors) own this stage: research-question decomposition, item content, study protocol, registration artifacts (ClinicalTrials.gov / OSF), and consent / RODO text. Claude / Cowork may help draft and scaffold these artifacts, but the investigators decide, edit, and approve everything. Design and orchestration are human work.
 
-## 3. Stage 2 — Instrument review (LLM-as-judge)
+## 3. Stage 2 — Independent item review (GPT-5.5, LLM-as-judge)
 
-A second, independent LLM evaluates each item against explicit criteria: clarity / comprehensibility, ambiguity, double-barrelled phrasing, leading / loaded wording, cultural bias, response-option balance, and content-validity relevance. The reviewer returns structured flags and suggested fixes that loop back to Stage 1. Human experts adjudicate. Where formal content validity is required, LLM relevance ratings may be reported alongside — never instead of — a human expert panel (e.g., I-CVI / CVI).
+An independent LLM (GPT-5.5) evaluates each item against explicit criteria: clarity / comprehensibility, ambiguity, double-barrelled phrasing, leading / loaded wording, cultural bias, response-option balance, and content-validity relevance. The reviewer returns structured flags and suggested fixes that loop back to the investigators, who adjudicate. Where formal content validity is required, LLM relevance ratings may be reported alongside — never instead of — a human expert panel (e.g., I-CVI / CVI).
 
-## 4. Stage 3 — Data capture (REDCap)
+## 4. Stage 3 — Instrument build & data capture (Claude / Cowork + REDCap)
 
-The approved instrument is implemented in REDCap: data dictionary, branching logic, consent, RODO collapsible, validation rules. REDCap provides access control, an audit trail, and API access. De-identified exports feed Stage 4.
+Once the investigators approve the items, Claude / Cowork builds and operates the instrument in REDCap — data dictionary, branching logic, consent, RODO collapsible, validation rules — via MCP / browser automation, under investigator direction. REDCap provides access control, an audit trail, and API access. De-identified exports feed Stage 4.
 
 ## 5. Stage 4 — Analytics dashboards (Python / React)
 

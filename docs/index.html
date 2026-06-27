@@ -37,7 +37,7 @@
     <strong>Maksymilian Lech</strong><br>
     Department of Respiratory Physiopathology, Medical University of Białystok, Poland
   </p>
-  <p class="lead">DIVE-PL specifies and demonstrates an end-to-end pipeline for designing, fielding and analysing questionnaire research using an integrated chain of AI tools, wrapped in an open-science layer that makes every step independently verifiable.</p>
+  <p class="lead">DIVE-PL is a <strong>human-led, AI-assisted</strong> methodology: investigators design and orchestrate the study, while a tool-chain (Claude&nbsp;/&nbsp;Cowork, GPT-5.5, REDCap, Python/React dashboards) executes and reviews under human oversight — wrapped in an open-science layer that makes every step verifiable.</p>
 
   <div class="badges">
     <a class="badge" href="https://doi.org/10.5281/zenodo.20977890">Zenodo DOI</a>
@@ -53,12 +53,12 @@
   <h2>The contribution</h2>
   <p>The novelty is the <strong>integration</strong>, not any single technique. Each component has prior art; to our knowledge the combination of all four components plus a full open-science reproducibility layer has not been published as a single survey-study methodology (literature scan, mid-2026). See <a href="related-work.html">Related work</a>.</p>
 
-  <h2>The four components</h2>
+  <h2>Who does what</h2>
   <div class="cards">
-    <div class="card"><h3>1 · LLM agent</h3><p>Claude / Cowork designs &amp; orchestrates the study: protocol, item drafting, registration artifacts, workflow.</p></div>
-    <div class="card"><h3>2 · LLM reviewer</h3><p>GPT acts as an independent <em>LLM-as-judge</em>, flagging bias, ambiguity, and content-validity issues.</p></div>
-    <div class="card"><h3>3 · REDCap</h3><p>Electronic data capture: validated instrument, consent / RODO logic, de-identified data store.</p></div>
-    <div class="card"><h3>4 · Dashboards</h3><p>AI-built Python / React analytics, published openly via GitHub Pages.</p></div>
+    <div class="card"><h3>Investigators (authors)</h3><p>Humans design and orchestrate the study — research questions, protocol, item content, decisions and interpretation.</p></div>
+    <div class="card"><h3>GPT-5.5</h3><p>Independent reviewer (<em>LLM-as-judge</em>) of survey items — flags bias, ambiguity, content-validity issues; fixes loop back to the investigators.</p></div>
+    <div class="card"><h3>Claude / Cowork</h3><p>Agentic assistant that builds and operates the REDCap instrument via MCP / browser automation, under investigator direction.</p></div>
+    <div class="card"><h3>REDCap + dashboards</h3><p>De-identified electronic data capture (consent / RODO) and AI-assisted Python / React analytics, published openly.</p></div>
   </div>
 
   <h2>Open-science layer</h2>

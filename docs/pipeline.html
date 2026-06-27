@@ -31,26 +31,32 @@
 
 
   <h1>Pipeline</h1>
-  <p class="lead">Four AI components in a reviewed loop, governed end-to-end by human oversight and an open-science layer.</p>
+  <p class="lead">A human-led, AI-assisted loop: investigators design and own the study; AI tools execute and review under their direction; experts approve every step.</p>
 
   <div class="flow">
-    <div class="flow-step">1 · LLM agent (Claude / Cowork) — design &amp; orchestration</div>
-    <div class="flow-step">2 · LLM reviewer (GPT, LLM-as-judge) — validates items, loops fixes back</div>
-    <div class="flow-step">3 · REDCap — validated instrument, consent / RODO, de-identified capture</div>
-    <div class="flow-step">4 · AI-built dashboards (Python / React) — aggregated analytics</div>
-    <div class="flow-step scoped">Open-science layer: GitHub · Zenodo DOI · OSF preregistration · GitHub Pages</div>
+    <div class="flow-step">1 · Investigators (authors) — study design &amp; orchestration</div>
+    <div class="flow-step">2 · GPT-5.5 (LLM-as-judge) — independent item review; fixes loop back to investigators</div>
+    <div class="flow-step">3 · Claude / Cowork — builds &amp; operates the approved instrument in REDCap (MCP / browser automation)</div>
+    <div class="flow-step">4 · REDCap — consent / RODO + de-identified capture</div>
+    <div class="flow-step">5 · AI-assisted dashboards (Python / React) — aggregated analytics</div>
+    <div class="flow-step scoped">Human-in-the-loop at every step · Open-science layer: GitHub · Zenodo DOI · OSF · GitHub Pages</div>
   </div>
 
   <div class="callout">
-    <p><strong>Reviewed loop.</strong> Stage 1 drafts items; Stage 2 returns structured flags (bias, clarity, validity); the agent revises; a human expert approves before anything reaches REDCap.</p>
+    <p><strong>Reviewed loop.</strong> Investigators draft items; GPT-5.5 returns structured flags (bias, clarity, validity); investigators revise; Claude / Cowork then builds the approved instrument in REDCap. Nothing goes live without investigator approval.</p>
   </div>
 
   <div class="callout warning">
-    <p><strong>Governance.</strong> A domain expert governs all four stages. AI augments and is verified; it does not replace expert judgment.</p>
+    <p><strong>Governance.</strong> The investigators own study design and orchestration. AI tools assist, execute, and review under their direction; they augment and are verified — they do not replace expert judgment, and are not co-authors.</p>
   </div>
 
-  <p>The canonical source diagram (Mermaid) lives at <a href="https://github.com/kicrazom/DIVE-PL/blob/main/docs/architecture.mmd"><code>docs/architecture.mmd</code></a>.</p>
-  
+  <h2>Full research architecture</h2>
+  <p>End-to-end view from governance and the evidence gap, through investigator-led instrument design (with AI-assisted drafting and GPT-5.5 review), REDCap capture, scoring, analysis, the planned paper series, and the open-science layer.</p>
+  <div class="table-scroll" style="border:1px solid var(--rule);border-radius:8px;padding:0.6rem;background:#fff;">
+    <img src="assets/architecture.svg" alt="DIVE-PL research architecture: governance, evidence gap, questionnaire design, instrument domains, REDCap capture, processing and scoring, statistical analysis, scientific outputs, and the open-science layer." style="width:100%;height:auto;min-width:760px;">
+  </div>
+  <p class="muted">Source (Mermaid): <a href="https://github.com/kicrazom/DIVE-PL/blob/main/docs/architecture.mmd"><code>docs/architecture.mmd</code></a>. Investigators own design &amp; orchestration; Claude / Cowork builds and operates the REDCap instrument; GPT-5.5 reviews items; human-in-the-loop oversees every stage.</p>
+
 
 </div>
 </main>

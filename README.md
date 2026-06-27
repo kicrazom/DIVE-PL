@@ -18,14 +18,14 @@ DIVE-PL is a **methods / framework project**: it specifies and demonstrates an e
 
 The **contribution is the integration**, not any single technique. Each component has prior art (see [`docs/related-work.md`](docs/related-work.md)); to our knowledge the *combination* of all four components plus a full open-science reproducibility layer has not been published as a single survey-study methodology (literature scan, mid-2026).
 
-## The four-component pipeline
+## How it works — human-led, AI-assisted
 
-1. **LLM agent (Claude / Cowork)** — designs and orchestrates the study: protocol, item drafting, registration artifacts, workflow.
-2. **LLM reviewer (GPT, *LLM-as-judge*)** — independently reviews/validates survey items for clarity, bias, double-barrelled wording, and content-validity relevance.
-3. **REDCap** — electronic data capture: the validated instrument, consent / RODO logic, and de-identified data store.
-4. **AI-built analytics dashboards (Python / React)** — interactive analysis and reporting, published openly.
+1. **Investigators (authors)** — design and orchestrate the study: research questions, protocol, item content, registration, interpretation. This is human work.
+2. **GPT-5.5 (*LLM-as-judge*)** — independently reviews survey items for clarity, bias, double-barrelled wording, and content-validity relevance; fixes loop back to the investigators.
+3. **Claude / Cowork** — builds and operates the approved instrument in REDCap via MCP / browser automation, under investigator direction.
+4. **REDCap + AI-assisted dashboards (Python / React)** — de-identified electronic data capture (consent / RODO) and aggregated analytics, published openly.
 
-All four operate **human-in-the-loop**: AI augments and is verified by a domain expert; it does not replace expert judgment.
+**Human-in-the-loop at every step:** AI tools assist, execute, and review; investigators decide and approve. AI tools are not co-authors.
 
 See [`docs/architecture.mmd`](docs/architecture.mmd) and [`METHODOLOGY.md`](METHODOLOGY.md).
 

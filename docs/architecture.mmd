@@ -1,36 +1,132 @@
+%% DIVE-PL research architecture
+%% Anonymous cross-sectional survey of recreational divers in Poland
 flowchart TD
-    subgraph S1["1 - Design & Orchestration"]
-        A["LLM Agent<br/>Claude / Cowork"]
+    subgraph GOV["0 · Governance & scientific oversight"]
+        PI["Principal investigator<br/>diving medicine + exercise physiology"]
+        ETH["Bioethics approval<br/>UMB Bioethics Committee · APK.002.228.2026"]
+        DMP["Data management plan<br/>anonymous survey data (RODO/GDPR)"]
+        HITL[["Human-in-the-loop<br/>clinical & methodological oversight"]]
     end
-    subgraph S2["2 - Instrument Review"]
-        B["LLM Reviewer<br/>GPT (LLM-as-judge)"]
+    subgraph EVID["1 · Evidence base & research gap"]
+        SR["Systematic / scoping review<br/>health, fitness, safety behaviours, adverse events"]
+        GAP["Research gap<br/>integrated model missing in active divers"]
+        RQ["Research questions<br/>health + eCRF + DASI/VSAQ + knowledge + behaviour + incidents"]
     end
-    subgraph S3["3 - Data Capture"]
-        C[("REDCap<br/>EDC platform")]
+    subgraph DESIGN["2 · Questionnaire design (investigator-led)"]
+        EXPERT["Investigator / expert authoring<br/>diving medicine, pulmonology, exercise physiology"]
+        LLM1["AI-assisted drafting<br/>Claude / Cowork — under investigator direction"]
+        JUDGE["LLM-as-reviewer<br/>GPT-5.5 · clarity, bias, redundancy, logic"]
+        PILOT["Pilot testing<br/>readability, branching, completion time"]
     end
-    subgraph S4["4 - Analytics"]
-        D["AI-built Dashboards<br/>Python / React"]
+    subgraph DOMAINS["3 · Survey instrument domains"]
+        D1["Eligibility & consent<br/>adult active divers"]
+        D2["Demographics<br/>age, sex, BMI, waist"]
+        D3["Diving exposure<br/>experience, depth, frequency, environment"]
+        D4["Health status<br/>fit-to-dive conditions & medication classes"]
+        D5["Physical activity & eCRF<br/>PA-R / non-exercise VO2max"]
+        D6["Functional capacity<br/>DASI + VSAQ"]
+        D7["Safety knowledge<br/>10-item scored test"]
+        D8["Procedural adherence<br/>surface interval, ascent rate, stops, gas checks"]
+        D9["Risk behaviours<br/>alcohol, fatigue, infection, buddy check, limits"]
+        D10["Adverse events<br/>barotrauma, DCS/DCI, near-miss, freediving events"]
     end
-
-    A -->|draft items, protocol| B
-    B -->|flags: bias, clarity, validity| A
-    A -->|validated instrument| C
-    C -->|de-identified export| D
-
-    H[["Human-in-the-loop<br/>expert oversight"]]
-    H -.governs.- A
-    H -.governs.- B
-    H -.governs.- C
-    H -.governs.- D
-
-    subgraph OS["Open-science layer (reproducibility)"]
-        G["GitHub repo"]
-        Z["Zenodo DOI"]
-        O["OSF preregistration"]
-        P["GitHub Pages live dashboard"]
+    subgraph CAPTURE["4 · Recruitment & REDCap data capture"]
+        REC["Open online recruitment<br/>clubs, schools, organisations, social media"]
+        COWORK["Claude / Cowork agent<br/>builds & operates instrument in REDCap (MCP / browser)"]
+        REDCAP[("REDCap<br/>anonymous online survey")]
+        LOGIC["Branching logic<br/>freediving, DCS/DCI, adverse-event follow-up"]
+        EXPORT["Anonymous export<br/>CSV / codebook / data dictionary"]
     end
-
-    A -.archived.-> G
-    A -.preregistered.-> O
-    D -.published.-> P
-    G --> Z
+    subgraph PROCESS["5 · Processing, scoring & QC"]
+        QC["Data quality checks<br/>range, missingness, inconsistency"]
+        SCORE1["eCRF score<br/>estimated VO2max"]
+        SCORE2["Functional scores<br/>DASI, VSAQ MET estimate"]
+        SCORE3["Knowledge score<br/>0–10 points"]
+        SCORE4["Safety-behaviour score<br/>procedural adherence / risk"]
+        ENDPOINT["Primary endpoint<br/>any diving-related adverse event in last 24 months"]
+    end
+    subgraph ANALYSIS["6 · Statistical analysis"]
+        DESC["Descriptive epidemiology<br/>diver profile & exposure"]
+        REG["Regression models<br/>adverse events vs health, fitness, knowledge, behaviour"]
+        SENS["Sensitivity analyses<br/>eCRF vs DASI vs VSAQ"]
+        SUB["Subgroup analyses<br/>SCUBA, freediving, technical/deep"]
+    end
+    subgraph OUTPUTS["7 · Scientific outputs"]
+        P0["Paper 0 · systematic / scoping review"]
+        P1["Paper 1 · national cross-sectional survey"]
+        P2["Paper 2 · knowledge–behaviour gap"]
+        P3["Paper 3 · functional reserve & adverse events"]
+        P4["Paper 4 · procedural adherence & near-miss"]
+    end
+    subgraph OPEN["8 · Open-science & reproducibility layer"]
+        GH["GitHub repository<br/>protocol, code, documentation"]
+        OSF["OSF preregistration<br/>analysis plan"]
+        ZEN["Zenodo DOI<br/>versioned releases"]
+        DASH["GitHub Pages dashboard<br/>aggregate results only"]
+    end
+    PI --> ETH
+    PI --> DMP
+    SR --> GAP --> RQ
+    RQ --> EXPERT
+    EXPERT --> LLM1
+    LLM1 --> JUDGE
+    JUDGE --> EXPERT
+    EXPERT --> PILOT
+    PILOT --> D1
+    D1 --> D2 --> D3 --> D4 --> D5 --> D6 --> D7 --> D8 --> D9 --> D10
+    D10 --> COWORK
+    COWORK --> REDCAP
+    ETH --> REC
+    REC --> REDCAP
+    REDCAP --> LOGIC
+    LOGIC --> EXPORT
+    EXPORT --> QC
+    QC --> SCORE1
+    QC --> SCORE2
+    QC --> SCORE3
+    QC --> SCORE4
+    QC --> ENDPOINT
+    SCORE1 --> REG
+    SCORE2 --> REG
+    SCORE3 --> REG
+    SCORE4 --> REG
+    ENDPOINT --> REG
+    REG --> DESC
+    REG --> SENS
+    REG --> SUB
+    SR --> P0
+    DESC --> P1
+    SCORE3 --> P2
+    SCORE4 --> P2
+    SCORE1 --> P3
+    SCORE2 --> P3
+    ENDPOINT --> P3
+    SCORE4 --> P4
+    ENDPOINT --> P4
+    RQ -.preregister.-> OSF
+    EXPORT -.data dictionary only.-> GH
+    QC -.analysis code.-> GH
+    GH --> ZEN
+    DESC -.aggregate results.-> DASH
+    P1 -.aggregate results.-> DASH
+    HITL -.oversees.-> EVID
+    HITL -.oversees.-> DESIGN
+    HITL -.oversees.-> DOMAINS
+    HITL -.oversees.-> CAPTURE
+    HITL -.oversees.-> PROCESS
+    HITL -.oversees.-> ANALYSIS
+    HITL -.oversees.-> OUTPUTS
+    classDef gov fill:#e8f3ff,stroke:#2b6cb0,stroke-width:1px,color:#0b2545;
+    classDef evidence fill:#f3f8ec,stroke:#5a8f29,stroke-width:1px,color:#1f2d16;
+    classDef design fill:#fff4e6,stroke:#c56a00,stroke-width:1px,color:#3a2200;
+    classDef data fill:#eef7f6,stroke:#008c8c,stroke-width:1px,color:#003333;
+    classDef analysis fill:#f5efff,stroke:#6b46c1,stroke-width:1px,color:#241247;
+    classDef output fill:#fff0f3,stroke:#b83280,stroke-width:1px,color:#3b0a22;
+    classDef open fill:#f7fafc,stroke:#4a5568,stroke-width:1px,color:#1a202c;
+    class PI,ETH,DMP,HITL gov;
+    class SR,GAP,RQ evidence;
+    class EXPERT,LLM1,JUDGE,PILOT design;
+    class D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,REC,COWORK,REDCAP,LOGIC,EXPORT,QC,SCORE1,SCORE2,SCORE3,SCORE4,ENDPOINT data;
+    class DESC,REG,SENS,SUB analysis;
+    class P0,P1,P2,P3,P4 output;
+    class GH,OSF,ZEN,DASH open;
