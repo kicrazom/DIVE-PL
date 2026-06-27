@@ -74,6 +74,8 @@ The framework is demonstrated on a cross-sectional online survey of recreational
 
 See [`CITATION.cff`](CITATION.cff). A Zenodo DOI is minted on the first tagged release.
 
-## Author
+## Authors
 
 **Łukasz Minarowski, MD, PhD** — Department of Respiratory Physiopathology, Medical University of Białystok, Poland · ORCID [0000-0002-2536-3508](https://orcid.org/0000-0002-2536-3508)
+**Jakub Matuk**
+**Maksymilian Lech**
