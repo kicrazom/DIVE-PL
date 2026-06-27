@@ -52,15 +52,14 @@ DIVE-PL/
   RELEASES.md               # changelog / release notes
   .zenodo.json              # Zenodo deposit metadata
   .gitignore / .gitattributes
-  .github/workflows/pages.yml   # auto-deploy site/ to GitHub Pages
   docs/
+    index.html              # GitHub Pages landing / dashboard
+    .nojekyll
     related-work.md         # component -> nearest precedent -> our difference
     architecture.mmd        # pipeline diagram (Mermaid)
     open-science-checklist.md
     thesis-outline.md       # engineering-thesis (PL) IMRaD skeleton
     CLINICAL_TRIALS.md      # registration details
-  site/
-    index.html              # GitHub Pages landing / dashboard
   src/
     README.md               # code map (agent / reviewer / redcap / dashboard)
   data/

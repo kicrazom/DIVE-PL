@@ -21,8 +21,9 @@ Goal: anyone can independently reproduce the methodology and verify the case-stu
 - [ ] Cross-link OSF <-> ClinicalTrials.gov (see `CLINICAL_TRIALS.md`)
 
 ## 4. GitHub Pages (live dashboard)
-- [x] Pages source prepared in `site/` + auto-deploy workflow `.github/workflows/pages.yml`
-- [ ] Settings -> Pages -> Source = **GitHub Actions** (one-time)
+- [x] Pages source prepared in `docs/` (`docs/index.html` + `docs/.nojekyll`)
+- [ ] Settings -> Pages -> Source = **Deploy from a branch** -> `main` / `/docs` (one-time)
+- [ ] Confirm site at https://kicrazom.github.io/DIVE-PL/
 - [ ] Verify the dashboard loads only **aggregated / de-identified** data (RODO)
 - [ ] Link the Pages URL from `README.md`
 
