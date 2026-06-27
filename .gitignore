@@ -28,6 +28,9 @@ data/processed/
 *.sav
 *.dta
 !data/**/README.md
+# Exception: REDCap *instrument* definitions (data dictionaries) are metadata,
+# not participant data — they describe the questionnaire, contain no responses.
+!src/redcap/*.csv
 
 # OS / editor
 .DS_Store
