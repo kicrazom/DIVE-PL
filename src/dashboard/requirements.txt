@@ -1,0 +1,4 @@
+# DIVE-PL Stage 4 — dashboard reference implementation
+# scoring.py and aggregate.py use only the Python standard library.
+# The interactive app needs Streamlit:
+streamlit>=1.36
