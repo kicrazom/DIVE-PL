@@ -2,11 +2,16 @@
 
 ## Unreleased
 
-- Reference implementation, first slices:
-  - `src/redcap/` (Stage 3) — final data dictionary v4 (136 fields) + the
-    `add_fitness.py` / `fix_dd.py` dictionary-transform scripts, with README.
+- Reference implementation — **all four components** of the pipeline now populated:
+  - `src/agent/` (Stage 1) — investigator-led design/orchestration prompts
+    (decompose RQ, draft items, scaffold protocol/consent/RODO) + orchestration note.
   - `src/reviewer/` (Stage 2) — LLM-as-judge rubric, item-review prompt with a
     structured JSON output contract, and README.
+  - `src/redcap/` (Stage 3) — final data dictionary v4 (136 fields) + the
+    `add_fitness.py` / `fix_dd.py` dictionary-transform scripts, with README.
+  - `src/dashboard/` (Stage 4) — `scoring.py` (faithful mirror of the REDCap calc
+    fields), `aggregate.py` (aggregates-only summary with k-anonymity suppression),
+    `app.py` (Streamlit), requirements + README.
 - `.gitignore`: whitelist `src/redcap/*.csv` (instrument metadata, not participant data).
 - Checklist/release notes reconciled with live state (DOI, Pages, public — see below).
 
@@ -17,7 +22,6 @@
 - GitHub Pages live and built at https://kicrazom.github.io/DIVE-PL/.
 
 ### Still TODO before preprint
-- Finish `src/agent/` (Stage 1) and `src/dashboard/` (Stage 4).
 - Create OSF project + preregistration (H1–H3); cross-link to ClinicalTrials.gov.
 - Insert ClinicalTrials.gov NCT number once assigned.
 - Confirm final author list / co-authors.

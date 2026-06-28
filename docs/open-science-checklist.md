@@ -8,9 +8,9 @@ _Last reconciled with live state: 2026-06-28._
 - [x] Repository created
 - [x] Methodology, related work, architecture, licensing, citation
 - [x] Repository is **public**
-- [~] Add reference implementation under `src/` — `src/redcap/` (Stage 3) and
-  `src/reviewer/` (Stage 2) populated; `src/agent/` (Stage 1) and `src/dashboard/`
-  (Stage 4) still scaffold
+- [x] Add reference implementation under `src/` — all four components populated:
+  `src/agent/` (Stage 1), `src/reviewer/` (Stage 2), `src/redcap/` (Stage 3),
+  `src/dashboard/` (Stage 4)
 
 ## 2. Zenodo (archival DOI)
 - [x] Repo enabled in Zenodo's GitHub integration
